@@ -25,7 +25,7 @@ export default function Home(props) {
 
 export async function getServerSideProps(context){
 
-  const response = await fetch('https://xkcd-smoky.vercel.app/');
+  const response = await fetch('http://xkcd.com/info.0.json');
   const data = await response.json();
   return {
     props: {
@@ -35,6 +35,6 @@ export async function getServerSideProps(context){
 }
 
 
-  https://xkcd-smoky.vercel.app/
+  
 
   

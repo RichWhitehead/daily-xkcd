@@ -4,7 +4,7 @@ export default function Footer(props){
   const nums = [];
  
 
-  for(let i = currentNum; i>= currentNum -9; i--){
+  for(let i = currentNum; i > currentNum -10; i--){
     nums.push(i)
   }
 
@@ -13,12 +13,9 @@ export default function Footer(props){
       <h2>Previous {nums.length}</h2>
       <ul>
           {nums.map(num => (
-          
-            <li key={num}>
-              <Link href="/num/[id].js" as={`/num/`}>
+              <Link href="/num/[id].js" as={`/num/${num}`}>
                 <a>#{num}</a>
               </Link>
-            </li>
           ))}
       </ul>
     </footer>  
